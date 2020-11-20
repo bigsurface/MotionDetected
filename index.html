@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    
+    <style>
+        
+        body {
+            background-image: url('img/node.jpg');
+    /* this is the image we all made together */
+            background-size: cover;
+            text-align: center;
+        }
+        
+        a {
+            margin-left:50px;
+            margin-top: 10px;
+        }
+
+        .wrapper {
+            width: 400px;
+            margin-left: 475px;
+            margin-top: 100px;        
+        }
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+
+
+
+    <title>MotionDetected</title>
+</head>
+<body onclick="changeImage()">
+    
+    <!-- <nav class="ui three item menu">
+
+        <a class="item" href="index.html">It rained</a>
+        <a class="item" href="pageTwo.html">Too wet to bike around the bay</a>
+        <a class="item" href="pageThree.html">Posting up QR codes forcrypto??</a>
+
+    </nav> -->
+
+    <div class="wrapper">
+        <img src="img/passiveinfraredd.jpg" alt="">
+        <h1>Motion Detected!!</h1>
+    </div>
+
+
+
+<script>
+
+
+const pathNames = [
+        // 'img/greenisgone.jpg',
+        // 'img/redisstopping.jpg',
+        // 'img/nomorebikeride.jpg',
+        'img/passiveinfrared.jpg',
+        'img/picamera.jpg',
+    ];
+
+const myImageElement = document.body.querySelector('img');
+myImageElement.src = `${pathNames[1]}`;
+
+const changeImage = () => {
+
+    myImageElement.src = `${pathNames[Math.floor(Math.random()*pathNames.length)]}`;
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Additional items beyond PIR and camera seeking feedback on deploying ---
+GPS tracker?
+Ham Radio broadcast? -->
