@@ -24,6 +24,12 @@
             margin-left: 475px;
             margin-top: 100px;        
         }
+	    
+	.python {
+            width: 400px;
+            margin-left: 475px;
+            margin-top: 500px;        
+        }
 
         img {
             width: 100%;
@@ -50,6 +56,23 @@
         <h1>Motion Detected!!</h1>
     </div>
 
+    <div class="python">
+<h1>
+from gpiozero import MotionSensor<br>
+from picamera import PiCamera<br>
+<br>
+pir = MotionSensor(4)<br>
+camera = PiCamera()<br>
+filename = "mousetrap.h264"<br>
+<br>
+while True:<br>
+	pir.wait_for_motion()<br>
+	print("Mouse Caught!")<br>
+	camera.start_recording(filename)<br>
+	pir.wait_for_no_motion()<br>
+	camera.stop_recording()<br>
+</h1>
+    </div>
 
 
 <script>
@@ -75,21 +98,7 @@ const changeImage = () => {
 </script>
 
 
-<h1>
-from gpiozero import MotionSensor<br>
-from picamera import PiCamera<br>
-<br>
-pir = MotionSensor(4)<br>
-camera = PiCamera()<br>
-filename = "mousetrap.h264"<br>
-<br>
-while True:<br>
-	pir.wait_for_motion()<br>
-	print("Mouse Caught!")<br>
-	camera.start_recording(filename)<br>
-	pir.wait_for_no_motion()<br>
-	camera.stop_recording()<br>
-</h1>
+
 
 </body>
 </html>
